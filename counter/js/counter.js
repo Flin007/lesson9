@@ -16,8 +16,10 @@ incrementBtn.addEventListener('click', () => {
 });
 
 decrementBtn.addEventListener('click', () => {
-    localStorage.counter--;
-    counter.textContent = localStorage.counter;
+    if (localStorage.counter > 0){
+        localStorage.counter--;
+        counter.textContent = localStorage.counter;
+    }
 });
 
 resetBtn.addEventListener('click', () => {
